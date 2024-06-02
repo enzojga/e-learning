@@ -1,10 +1,10 @@
 import { Props } from './Button.interface';
 import { ButtonContainer } from './Button.styled';
 
-const Button = ({text, darkMode}: Props) => {
+const Button = ({text, darkMode, width}: Props) => {
   
   return (
-    <ButtonContainer darkMode={darkMode}>
+    <ButtonContainer width={width} darkMode={darkMode}>
         {text}
     </ButtonContainer>
   )

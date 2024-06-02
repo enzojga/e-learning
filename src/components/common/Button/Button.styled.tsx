@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ButtonProps } from "./Button.interface";
 
 export const ButtonContainer = styled.button<ButtonProps>`
-    width: 124px;
+    width: ${props => props.width ? props.width : '124px'};
     height: 48px;
     display: flex;
     flex-direction: row;
@@ -13,7 +13,6 @@ export const ButtonContainer = styled.button<ButtonProps>`
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin: 0px 12px;
     border-radius: 999px;
     border: ${props => props.darkMode ? '1px solid rgb(1, 254, 132);' : 'none'};
 

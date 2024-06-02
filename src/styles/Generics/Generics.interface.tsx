@@ -1,3 +1,5 @@
 export interface FlexContainerProps {
-    disapearOnTablet?: boolean,
+    disapearontablet?: boolean,
+    gap?: string,
+    turncolumnontablet?: boolean
 }
