@@ -1,1 +1,1 @@
-export const t = {}
+export interface HomeInterface {}

@@ -1,3 +1,4 @@
+import AboutUs from "./components/specific/AboutUs/AboutUs";
 import Features from "./components/specific/Features/Features";
 import Home from "./components/specific/Home/Home";
 import Mentors from "./components/specific/Mentors/Mentors";
@@ -9,10 +10,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      {/* <Home />
       <Features />
       <Pricing />
-      <Mentors />
+      <Mentors /> */}
+      <AboutUs />
     </>
   );
 }
