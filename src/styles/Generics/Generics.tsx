@@ -5,7 +5,7 @@ export const FlexContainer = styled.div<FlexContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-warp: warp;
+  flex-wrap: wrap;
   gap: ${props => props.gap ? props.gap : 'none'};
   @media (max-width: 1023px) {
     display: ${props => props.disapearontablet ? 'none' : 'flex'};
