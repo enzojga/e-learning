@@ -1,13 +1,14 @@
 import homeImage from '../../../assets/home-image.svg'
+import { GradientImage } from '../../../styles/Generics/Generics'
 import Button from '../../common/Button/Button'
 import Card from '../../common/Card/Card'
-import { GradientImageResize, HomeContainer, HomeTextContainer, ImageContainer, MainParagraph, SecundaryParagraph } from './Home.styled'
+import { HomeContainer, HomeTextContainer, ImageContainer, MainParagraph, SecundaryParagraph } from './Home.styled'
 
 const Home = () => {
   return (
     <HomeContainer turncolumnontablet={true}>
 			<ImageContainer>
-				<GradientImageResize src={homeImage} alt='Imagem principal'/>
+				<GradientImage src={homeImage} alt='Imagem principal'/>
 				<Card top='30%' right='72%' icon='illustration'/>
 				<Card top='37%' right='18%' icon='uiUx'/>
 			</ImageContainer>
@@ -24,4 +25,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

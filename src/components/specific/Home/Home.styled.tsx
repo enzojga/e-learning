@@ -16,7 +16,6 @@ export const MainParagraph = styled.p`
   font-size: 72px;
   font-weight: 600;
   line-height: 76px;
-  letter-spacing: 2%;
   text-align: left;
   text-transform: capitalize;
   @media (max-width: 1023px) {
@@ -29,7 +28,6 @@ export const SecundaryParagraph = styled.p`
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: 0px;
   text-align: left;
   margin: 16px 0 40px 0;
   @media (max-width: 1023px) {
@@ -43,7 +41,7 @@ export const HomeTextContainer = styled(FlexContainerColumn)`
   gap: 16px;
   width: 30vw;
   @media (max-width: 1023px) {
-    width: 100vw;
+    width: 90vw;
     align-items: center;
   }
 `;
@@ -54,10 +52,4 @@ export const ImageContainer = styled.div`
     height: 100%;
     width: 100vw;
   }
-`
-export const GradientImageResize = styled(GradientImage)`
-  @media (max-width: 1023px) {
-    height: 100%;
-    width: 100vw;
-  }
-`
+`;

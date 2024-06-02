@@ -1,5 +1,5 @@
 export interface RoundButtonProps {
-    onClick: () => void;
+    onClick?: () => void;
     rotate?: number;
     disapearOnTablet?: boolean;
 }
