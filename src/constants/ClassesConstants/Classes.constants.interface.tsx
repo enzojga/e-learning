@@ -1,4 +1,4 @@
-export interface PricingCardProps {
+export interface Classes {
     title: string,
     description: string,
     rate: string,

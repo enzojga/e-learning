@@ -1,7 +1,4 @@
-interface Pages {
-    label: string,
-    url: string
-}
+import { Pages } from "./Page.constants.interface";
 
 export const pages: Pages[] = [
     {

@@ -1,10 +1,10 @@
 import Button from '../../common/Button/Button';
 import { LogoText, Header, NavItem, NavItems, ButtonContainer, Navigation } from './Navbar.styled';
 import logo from '../../../assets/logo.svg';
-import { pages } from '../../../constants/Pages.constants';
 import { FlexContainer } from '../../../styles/Generics/Generics';
 import RoundButton from '../../common/RoundButton/RoundButton';
 import { useState } from 'react';
+import { pages } from '../../../constants/PagesConstants/Pages.constants';
 
 const Navbar = () => {
   const [rotation, setRotation] = useState(90);

@@ -3,6 +3,10 @@ import { FlexContainerColumn } from "../../../../styles/Generics/Generics";
 
 export const PricingCardContainer = styled(FlexContainerColumn)`
   align-items: start;
+  max-width: 397px;
+  @media (max-width: 1023px) {
+    max-width: 80vw;
+  }
 `;
 
 export const ClassIcon = styled.div`
@@ -16,6 +20,10 @@ export const ClassIcon = styled.div`
 
   border-radius: 16px;
   background: rgb(49, 54, 49);
+
+  @media (max-width: 1023px) {
+    max-width: 80vw;
+  }
 `;
 
 export const ClassTitle = styled.h3`
@@ -34,6 +42,7 @@ export const ClassDescription = styled.p`
   line-height: 24px;
   letter-spacing: 0px;
   text-align: left;
+  max-width: 350px
 `;
 
 export const DetailsText = styled.span`

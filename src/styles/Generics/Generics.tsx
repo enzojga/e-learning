@@ -5,6 +5,7 @@ export const FlexContainer = styled.div<FlexContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-warp: warp;
   gap: ${props => props.gap ? props.gap : 'none'};
   @media (max-width: 1023px) {
     display: ${props => props.disapearontablet ? 'none' : 'flex'};
@@ -32,6 +33,9 @@ export const WhiteParagraph = styled.p`
   line-height: 72px;
   text-align: left;
   text-transform: capitalize;
+  @media (max-width: 1023px) {
+    text-align: center;
+  }
 `;
 
 export const GrayParagraph = styled.p`
