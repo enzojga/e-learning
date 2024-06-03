@@ -4,8 +4,14 @@ import { DetailsParagraph, TextContainer } from './Mentors.styled'
 import { mentorsList } from '../../../constants/MentorConstants/Mentor.constants'
 import MentorCard from './MentorCard/MentorCard'
 import Button from '../../common/Button/Button'
+import { toast } from 'react-toastify'
 
 const Mentors = () => {
+
+  const mentorsWarning = () => {
+    toast.warning('No more tutors to show.');
+  }
+
   return (
     <FlexContainerColumn id='Mentors' gap='32px'>
       <TextContainer turncolumnontablet={true}>
@@ -21,7 +27,7 @@ const Mentors = () => {
           <MentorCard key={index} name={mentor.name} role={mentor.role}/>
         ))}
       </FlexContainer>
-      <Button text='Show More' width='196px'/>
+      <Button onClick={mentorsWarning} text='Show More' width='196px'/>
     </FlexContainerColumn>
   )
 }

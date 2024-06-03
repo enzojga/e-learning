@@ -3,8 +3,13 @@ import { FlexContainer, FlexContainerColumn, WhiteParagraph } from '../../../sty
 import PricingCard from './PricingCard/PricingCard'
 import Button from '../../common/Button/Button'
 import { classesList } from '../../../constants/ClassesConstants/Classes.constants'
+import { toast } from 'react-toastify'
 
 const Pricing = () => {
+
+  const classesWarning = () => {
+    toast.warning('No more classes to show.')
+  }
 
   return (
     <FlexContainerColumn id='Class' gap='34px'>
@@ -21,7 +26,7 @@ const Pricing = () => {
           ></PricingCard>
         ))}
       </FlexContainer>
-      <Button text='Show All Class' width='196px;'/>
+      <Button onClick={classesWarning} text='Show All Class' width='196px;'/>
     </FlexContainerColumn>
   )
 }
