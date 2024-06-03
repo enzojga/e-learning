@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { NavbarProps } from './Navbar.interace';
 import UserContext from '../../../contexts/UserContext/UserContext';
 
-const Navbar = ({ isLogged }: NavbarProps) => {
+const Navbar = ({ isLogged, hideNavigation }: NavbarProps) => {
   const navigate = useNavigate();
 
   const { userData } = useContext(UserContext);
@@ -22,7 +22,7 @@ const Navbar = ({ isLogged }: NavbarProps) => {
           <TabletOnlyContainer>
             <Button text='LOG IN' onClick={() => {navigate('/login')}}></Button>
           </TabletOnlyContainer>
-          <Navigation />
+          {hideNavigation ? <></> : <Navigation />}
           <FlexContainer gap='12px' disapearontablet={true}>
             <Button text='LOG IN' onClick={() => {navigate('/login')}}></Button>
             <Button darkMode={true} text='SIGN UP' onClick={() => {navigate('/signup')}}></Button>

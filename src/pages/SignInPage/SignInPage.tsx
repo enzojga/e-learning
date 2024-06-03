@@ -6,9 +6,9 @@ import Login from '../../components/specific/Login/Login'
 const SignInPage = () => {
   return (
     <>
-      <Navbar />
+      <Navbar hideNavigation={true}/>
       <Login />
-      <Footer />
+      <Footer hideNavigation={true}/>
     </>
   )
 }

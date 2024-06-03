@@ -3,12 +3,13 @@ import Logo from '../../common/Logo/Logo';
 import { InputText } from '../../../styles/Generics/Generics';
 import Navigation from '../../common/Navigation/Navigation';
 import Button from '../../common/Button/Button';
+import { FooterProps } from './Footer.interface';
 
-const Footer = () => {
+const Footer = ({ hideNavigation }: FooterProps) => {
   return (
     <FooterContainer gap='32px'>
       <Logo />
-      <Navigation />
+      {hideNavigation ? <></> : <Navigation />}
       <FooterBottomContainer>
         <NewsLetterContainer>
           <FooterText>Newsletter</FooterText>

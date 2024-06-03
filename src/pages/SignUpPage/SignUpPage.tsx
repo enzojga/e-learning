@@ -6,9 +6,9 @@ import Footer from '../../components/specific/Footer/Footer'
 const SignUpPage = () => {
   return (
     <>
-      <Navbar />
+      <Navbar hideNavigation={true} />
       <SignUp />
-      <Footer />
+      <Footer hideNavigation={true} />
     </>
   )
 }
