@@ -6,7 +6,7 @@ export const Header = styled.header`
   justify-content: space-around;
   border: 2px solid;
   background-color: black;
-  height: 5rem};
+  height: 5rem;
   width: 100vw;
   position: fixed;
   top: 0;

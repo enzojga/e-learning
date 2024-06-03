@@ -1,21 +1,22 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignInPage from './pages/SignInPage/SignInPage';
-import SignUpPage from './pages/SignUpPage/SignUpPage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { UserProvider } from './contexts/UserContext/UserContext';
-import Dashboard from './components/specific/Dashboard/Dashboard';
 import PrivateRoute from './components/common/PrivateRoute/PrivateRoute';
+import Loading from './components/common/Loading/Loading';
+import HomePage from './pages/HomePage/HomePage';
 
-const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+const SignInPage = lazy(() => import('./pages/SignInPage/SignInPage'));
+const SignUpPage = lazy(() => import('./pages/SignUpPage/SignUpPage'));
+const Dashboard = lazy(() => import('./components/specific/Dashboard/Dashboard'));
 
 function App() {
   return (
     <UserProvider>
       <BrowserRouter>
-        <ToastContainer/>
-        <Suspense fallback={<div>Loading...</div>}>
+        <ToastContainer />
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<SignInPage />} />
@@ -24,7 +25,7 @@ function App() {
               <PrivateRoute>
                 <Dashboard />
               </PrivateRoute>
-            }/>
+            } />
           </Routes>
         </Suspense>
       </BrowserRouter>
