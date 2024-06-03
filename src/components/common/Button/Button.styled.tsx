@@ -17,7 +17,7 @@ export const ButtonContainer = styled.button<ButtonProps>`
     border: ${props => props.darkMode ? '1px solid rgb(1, 254, 132);' : 'none'};
 
     box-shadow: ${props => props.darkMode ? 'none' : '0px 4px 59px 0px rgba(1, 254, 132, 0.4)'};
-    background: ${props => props.darkMode ? 'black' : 'rgb(1, 254, 132)'};
+    background: ${props => props.darkMode ? 'inherit' : 'rgb(1, 254, 132)'};
 
     color:  ${props => props.darkMode ? 'rgb(1, 254, 132)' : 'black'};
     font-family: 'Poppins', sans-serif;

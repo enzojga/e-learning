@@ -5,8 +5,10 @@ import RoundButton from '../../common/RoundButton/RoundButton';
 import { useState } from 'react';
 import Logo from '../../common/Logo/Logo';
 import Navigation from '../../common/Navigation/Navigation';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [rotation, setRotation] = useState(90);
   const [expandArea, setExpandArea] = useState(false);
 
@@ -27,7 +29,7 @@ const Navbar = () => {
       </ButtonContainer>
       <Navigation />
       <FlexContainer gap='12px' disapearontablet={true}>
-        <Button text='LOG IN'></Button>
+        <Button text='LOG IN' onClick={() => {navigate('/login')}}></Button>
         <Button darkMode={true} text='SIGN IN'></Button>
       </FlexContainer>
     </Header>
