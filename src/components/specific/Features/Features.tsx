@@ -19,13 +19,13 @@ const Features = () => {
       <FlexContainer>
         <GradientImage src={featureImage}/>
         <ButtonContainerBorderless
-          style={{top:'10%', left: '10%'}}
+          style={{top:'40%', left: '25%'}}
           darkMode={true}
         >
           ANYWHERE
         </ButtonContainerBorderless>
         <ButtonContainerBorderless
-          style={{top:'20%', left: '20%'}}
+          style={{top:'50%', left: '35%'}}
           darkMode={true}
         >
           EASY
