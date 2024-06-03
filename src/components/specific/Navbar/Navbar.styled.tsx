@@ -14,3 +14,10 @@ export const ButtonContainer = styled.div`
   @media (min-width: 1023px) {
     display: none;
 }`;
+
+export const WelcomeText = styled.p`
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  text-overflow: ...;
+`;

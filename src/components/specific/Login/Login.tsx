@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { LoginContainer } from './Login.styled';
 import { MsalProvider } from '@azure/msal-react';
 import msalInstance from '../../../config/Auth.config';
@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import Button from '../../common/Button/Button';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 import { useNavigate } from 'react-router-dom';
+import UserContext from '../../../contexts/UserContext/UserContext';
 
 const Login = () => {
 
@@ -15,10 +16,12 @@ const Login = () => {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [userCreated, setUserCreated] = useLocalStorage('userData', {});
+  const [userCreated, setUserCreated] = useLocalStorage('userCreated', {});
+  const { setUserData } = useContext(UserContext);
 
   function handleRequest(e: any) {
     e.preventDefault();
+
     if(username.length < 5 || password.length < 5) {
       toast.error("Os campos de usuário e senha precisam ter ao menos 5 carácteres!");
       return;
@@ -29,9 +32,13 @@ const Login = () => {
     }
     if(userCreated.username === username && userCreated.password === password){
       toast.success("Login sucessful!");
+      setUserData({token: true, username});
       setTimeout(() => {
-        navigate('/login');
+        navigate('/dashboard');
       }, 500);  
+    } else {
+      toast.error("Credentials incorrect!");
+      return;
     }
   }
 
@@ -61,7 +68,7 @@ const Login = () => {
             onChange={e => setPassword(e.target.value)}
           />
           <Button width='90%' text='Sign In'/>
-          <Button width='90%' text='Create an account' darkMode={true}/>
+          <Button onClick={() => {navigate('/signup')}} width='90%' text='Create an account' darkMode={true}/>
         </LoginFormWarp>
     </LoginContainer>
   )

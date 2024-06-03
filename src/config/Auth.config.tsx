@@ -6,7 +6,7 @@ const msalConfig = {
         authority: "https://login.microsoftonline.com/common",
         knownAuthorities: [],
         cloudDiscoveryMetadata: "",
-        redirectUri: "http://localhost:3000/login",
+        redirectUri: "http://localhost:3000/dashboard",
         postLogoutRedirectUri: "/",
         navigateToLoginRequestUrl: true,
         clientCapabilities: ["CP1"],
@@ -67,7 +67,6 @@ msalInstance.addEventCallback(event => {
     msalInstance.setActiveAccount(account);
   }
 });
-  
 
 export default msalInstance;
 

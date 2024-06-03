@@ -5,6 +5,7 @@ export const FooterContainer = styled(FlexContainerColumn).attrs({ as: 'footer' 
   background: rgb(31, 36, 31);
   padding: 47px 0px 47px 0px;
   width: 100vw;
+  margin-top: 36px;
 `;
 
 export const ButtonWarper = styled.span`

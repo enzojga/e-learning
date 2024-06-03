@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
-const UserContext = createContext({});
+const UserContext = createContext({userData: null, setUserData: null} as any);
 export default UserContext;
 
 export function UserProvider({ children }: any) {

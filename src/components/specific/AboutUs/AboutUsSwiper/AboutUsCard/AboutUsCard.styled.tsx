@@ -34,7 +34,5 @@ export const NameParagraph = styled.p`
   font-size: 32px;
   font-weight: 500;
   line-height: 44px;
-  letter-spacing: 2%;
   text-align: left;
-  text-transform: capitalize;
 `;

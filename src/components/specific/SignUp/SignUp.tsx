@@ -13,7 +13,7 @@ const SignUp = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [userCreated, setUserCreated] = useLocalStorage('userData', {});
+  const [userCreated, setUserCreated] = useLocalStorage('userCreated', {});
 
   function handleRequest(e: any) {
     e.preventDefault();
