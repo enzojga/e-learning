@@ -7,7 +7,7 @@ import { FlexContainerImage, GrayParagraph, InputText, LoginFormWarp, WhiteParag
 import { toast } from 'react-toastify';
 import Button from '../../common/Button/Button';
 import useLocalStorage from '../../../hooks/useLocalStorage';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import UserContext from '../../../contexts/UserContext/UserContext';
 
 const Login = () => {
@@ -17,7 +17,11 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [userCreated, setUserCreated] = useLocalStorage('userCreated', {});
-  const { setUserData } = useContext(UserContext);
+  const { userData, setUserData } = useContext(UserContext);
+
+  if(userData.token && userData.token !== true) {
+    return <Navigate to='/dashboard' replace />;
+  }
 
   function handleRequest(e: any) {
     console.log(e);

@@ -10,12 +10,12 @@ export const pages: Pages[] = [
         url: '/features'
     },
     {
-        label: 'Pricing',
-        url: '/pricing'
-    },
-    {
         label: 'Class',
         url: '/Class'
+    },
+    {
+        label: 'Mentors',
+        url: '/Mentors'
     },
     {
         label: 'About Us',

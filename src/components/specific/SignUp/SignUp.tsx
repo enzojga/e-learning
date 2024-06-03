@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { SignUpContainer } from './SignUp.styled'
-import { FlexContainerImage, GrayParagraph, InputText, LoginFormWarp, WhiteParagraph } from '../../../styles/Generics/Generics'
+import { FlexContainerImage, InputText, LoginFormWarp, WhiteParagraph } from '../../../styles/Generics/Generics'
 import Button from '../../common/Button/Button';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -58,7 +58,6 @@ const SignUp = () => {
             onChange={e => setConfirmPassword(e.target.value)}
           />
           <Button isSubmit={true} width='90%' text='Create account'/>
-          <GrayParagraph>Or</GrayParagraph>
           <Button onClick={() => {navigate('/login')}} darkMode={true} width='90%' text='Login'/>
         </LoginFormWarp>
         <FlexContainerImage>

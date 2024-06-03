@@ -1,5 +1,5 @@
 import { FlexContainer, FlexContainerColumn, GrayParagraph, WhiteParagraph } from '../../../styles/Generics/Generics'
-import { CategoryParagraph, DashboardContainer, ShapeContainerImage } from './Dashboard.styled'
+import { CategoryParagraph, DashboardContainer, TextsContainer } from './Dashboard.styled'
 import Card from '../../common/Card/Card'
 import { classesList } from '../../../constants/ClassesConstants/Classes.constants'
 import PricingCard from '../Pricing/PricingCard/PricingCard'
@@ -9,14 +9,14 @@ import MentorCard from '../Mentors/MentorCard/MentorCard'
 const Dashboard = () => {
   return (
     <DashboardContainer gap='36px'>
-      <FlexContainerColumn>
+      <TextsContainer>
         <WhiteParagraph>
           It seems that you haven't started your classes yet.
         </WhiteParagraph>
         <GrayParagraph>
           You can choose between categories, tutors, or classes.
         </GrayParagraph>
-      </FlexContainerColumn>
+      </TextsContainer>
       <FlexContainerColumn gap='32px'>
         <FlexContainerColumn gap='32px'>
           <CategoryParagraph>Categories</CategoryParagraph>

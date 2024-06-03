@@ -9,6 +9,7 @@ export const HomeContainer = styled(FlexContainer)`
     height: 100%;
     flex-direction: column-reverse;
   }
+  margin-top: 80px;
 `;
 
 export const MainParagraph = styled.p`

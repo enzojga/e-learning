@@ -6,7 +6,7 @@ import featureImage from '../../../assets/feature-image.svg';
 
 const Features = () => {
   return (
-    <FeatureContainer turncolumnontablet={true}>
+    <FeatureContainer id='Features' turncolumnontablet={true}>
       <FeatureTextContainer>
         <WhiteParagraph>
           Study Anywhere Easily Online

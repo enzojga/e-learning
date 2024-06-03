@@ -6,9 +6,8 @@ import { classesList } from '../../../constants/ClassesConstants/Classes.constan
 
 const Pricing = () => {
 
-
   return (
-    <FlexContainerColumn gap='34px'>
+    <FlexContainerColumn id='Class' gap='34px'>
       <WhiteParagraph>
         Favorite Class
       </WhiteParagraph>

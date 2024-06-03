@@ -5,11 +5,11 @@ import { FloatWhiteParagraph } from './AboutUs.styled'
 
 const AboutUs = () => {
   return (
-    <FlexContainer>
+    <FlexContainer id='About Us'>
       <FloatWhiteParagraph>What Our <br /> Students Are <br /> Saying</FloatWhiteParagraph>
       <AboutUsSwiper/>
     </FlexContainer>
   )
 }
 
-export default AboutUs
+export default AboutUs;

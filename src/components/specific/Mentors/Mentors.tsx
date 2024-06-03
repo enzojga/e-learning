@@ -7,7 +7,7 @@ import Button from '../../common/Button/Button'
 
 const Mentors = () => {
   return (
-    <FlexContainerColumn gap='32px'>
+    <FlexContainerColumn id='Mentors' gap='32px'>
       <TextContainer turncolumnontablet={true}>
         <WhiteParagraph>
           Professional Mentor

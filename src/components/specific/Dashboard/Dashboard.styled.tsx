@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import { FlexContainer, FlexContainerImage } from "../../../styles/Generics/Generics";
+import { FlexContainer, FlexContainerColumn, FlexContainerImage } from "../../../styles/Generics/Generics";
 import shapeImage from "../../../assets/shape.svg";
 
 export const DashboardContainer = styled(FlexContainer)`
   min-height: 100vh;
   justify-content: space-around;
+  margin-top: 88px;
+`;
+
+export const TextsContainer = styled(FlexContainerColumn)`
   p {
     text-align: center;
+    max-width: 80vw;
   }
 `;
 
