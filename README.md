@@ -33,7 +33,7 @@ A versão de deploy encontra-se com um bug na autenticação com a Microsoft por
 
 ## Considerações
 
-1. Dada a liberdade, alguns estilos de fontes foram alterados.
+1. Dada a liberdade, alguns estilos, botões, images e fontes foram alteradas.
 
 2. Ao fazer login pela Microsoft pelo celular rodando localmente, é possível que o provedor bloqueie o popup gerado pelo login social.
 
