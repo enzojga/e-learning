@@ -1,21 +1,19 @@
-import AboutUs from "./components/specific/AboutUs/AboutUs";
-import Features from "./components/specific/Features/Features";
-import Home from "./components/specific/Home/Home";
-import Mentors from "./components/specific/Mentors/Mentors";
-import Navbar from "./components/specific/Navbar/Navbar";
-import Pricing from "./components/specific/Pricing/Pricing";
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SignInPage from './pages/SignInPage/SignInPage';
+
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 
 function App() {
-
   return (
-    <>
-      <Navbar />
-      {/* <Home />
-      <Features />
-      <Pricing />
-      <Mentors /> */}
-      <AboutUs />
-    </>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<SignInPage />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 

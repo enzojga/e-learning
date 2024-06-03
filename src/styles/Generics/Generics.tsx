@@ -6,6 +6,7 @@ export const FlexContainer = styled.div<FlexContainerProps>`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
   gap: ${props => props.gap ? props.gap : 'none'};
   @media (max-width: 1023px) {
     display: ${props => props.disapearontablet ? 'none' : 'flex'};
@@ -60,4 +61,41 @@ export const FloatingBox = styled.div`
   border-radius: 27px;
   backdrop-filter: blur(10px);
   background: linear-gradient(137.56deg, rgb(32, 36, 32) 23.825%,rgba(32, 36, 32, 0) 124.544%);
+`;
+
+export const InputText = styled.input`
+  position: static;
+  width: 426px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 0px 0px 24px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 12px 0px;
+  box-sizing: border-box;
+  border: 1px solid rgba(1, 254, 132, 0.5);
+  border-radius: 999px;
+  background-color: inherit;
+  color: rgba(1, 254, 132, 0.5);
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  &:focus {
+    border-color: rgba(1, 254, 132, 0.5);
+    outline: none;
+  }
+  &::placeholder {
+    color: rgba(1, 254, 132, 0.5);
+    font-style: none;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  @media (max-width: 1023px) {
+    width: 95vw;
+  }
 `
