@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexContainer, FlexContainerColumn, GradientImage } from "../../../styles/Generics/Generics";
+import { FlexContainer, FlexContainerColumn } from "../../../styles/Generics/Generics";
 
 export const HomeContainer = styled(FlexContainer)`
   background-color: black;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexContainerProps } from "./Generics.interface";
+import { FlexContainerProps, InputProps } from "./Generics.interface";
 
 export const FlexContainer = styled.div<FlexContainerProps>`
   display: flex;
@@ -63,9 +63,9 @@ export const FloatingBox = styled.div`
   background: linear-gradient(137.56deg, rgb(32, 36, 32) 23.825%,rgba(32, 36, 32, 0) 124.544%);
 `;
 
-export const InputText = styled.input`
+export const InputText = styled.input<InputProps>`
   position: static;
-  width: 426px;
+  width: ${props => props.width ? props.width : '426px'};
   height: 48px;
   display: flex;
   flex-direction: row;
@@ -104,6 +104,6 @@ export const LoginFormWarp = styled(FlexContainerColumn).attrs({ as: 'form' })`
   box-shadow: 0px 4px 59px 0px rgba(1, 254, 132, 0.4), 0px 0px 10px 5px rgba(1, 254, 132, 0.4);
   background: rgb(31, 36, 31);
   width: 500px;
-  height: 400px;
+  height: 70vh;
   border-radius: 16px
 `;

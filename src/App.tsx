@@ -2,20 +2,26 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignInPage from './pages/SignInPage/SignInPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { UserProvider } from './contexts/UserContext/UserContext';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 
 function App() {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<SignInPage />} />
-          <Route path="/signup" element={<SignUpPage />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <UserProvider>
+      <BrowserRouter>
+        <ToastContainer/>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<SignInPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 

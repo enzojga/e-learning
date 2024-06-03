@@ -30,7 +30,7 @@ const Navbar = () => {
       <Navigation />
       <FlexContainer gap='12px' disapearontablet={true}>
         <Button text='LOG IN' onClick={() => {navigate('/login')}}></Button>
-        <Button darkMode={true} text='SIGN IN'></Button>
+        <Button darkMode={true} text='SIGN IN' onClick={() => {navigate('/signup')}}></Button>
       </FlexContainer>
     </Header>
   );

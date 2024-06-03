@@ -10,7 +10,7 @@ const Footer = () => {
       <Logo />
       <Navigation />
       <FooterBottomContainer>
-        <NewsLetterContainer gap='12px'>
+        <NewsLetterContainer>
           <FooterText>Newsletter</FooterText>
           <InputText placeholder='Enter your email'/>
           <ButtonWarper>

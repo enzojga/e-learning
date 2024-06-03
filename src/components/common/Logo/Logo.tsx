@@ -1,14 +1,18 @@
 import React from 'react'
 import logo from '../../../assets/logo.svg';
 import { FlexContainer } from '../../../styles/Generics/Generics';
-import { LogoText } from './Logo.styled';
+import { LogoContainer, LogoText } from './Logo.styled';
+import { useNavigate } from 'react-router-dom';
 
 const Logo = () => {
+
+  const navigate = useNavigate();
+
   return (
-    <FlexContainer>
+    <LogoContainer onClick={() => {navigate('/')}}>
       <img src={logo} alt='e-learning logo' aria-label="Lerntolern Logo" />
       <LogoText>Lerntolern</LogoText>
-    </FlexContainer>
+    </LogoContainer>
   )
 }
 
