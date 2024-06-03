@@ -1,6 +1,7 @@
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
 import { loginRequest } from '../../../../config/Auth.config';
 import Button from '../../../common/Button/Button';
+import { FlexContainer } from '../../../../styles/Generics/Generics';
 
 const LoginMicrosoft = () => {
 
@@ -16,17 +17,11 @@ const LoginMicrosoft = () => {
   }
   
   return (
-    <div>
-      <AuthenticatedTemplate>
-        <div>
-          <h2>Welcome, {activeAccount?.name}</h2>
-          <p>You are logged in with Microsoft.</p>
-        </div>
-      </AuthenticatedTemplate>
+    <FlexContainer style={{width: '100%'}}>
       <UnauthenticatedTemplate>
-        <Button darkMode={true} width='380px' text='Microsoft Login' onClick={handleRedirect}/>
+        <Button darkMode={true} width='90%' text='Microsoft Login' onClick={handleRedirect}/>
       </UnauthenticatedTemplate>
-    </div>
+    </FlexContainer>
   )
 }
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FlexContainerProps, InputProps } from "./Generics.interface";
+import loginImage from '../../assets/login-image.svg';
 
 export const FlexContainer = styled.div<FlexContainerProps>`
   display: flex;
@@ -109,5 +110,19 @@ export const LoginFormWarp = styled(FlexContainerColumn).attrs({ as: 'form' })`
   @media (max-width: 1023px) {
     width: 100vw;
     border-radius: 0;
+  }
+`;
+
+export const FlexContainerImage = styled(FlexContainer)`
+  background-image: url(${loginImage});
+  background-size: cover;
+  background-position: center;
+  width: 40vw;
+  height: 40vw;
+  & > p {
+    text-align: center;
+  }
+  @media (max-width: 1023px) {
+    display: none;
   }
 `;

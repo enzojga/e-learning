@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { FlexContainerImage, SignUpContainer } from './SignUp.styled'
-import { GrayParagraph, InputText, LoginFormWarp, WhiteParagraph } from '../../../styles/Generics/Generics'
+import { SignUpContainer } from './SignUp.styled'
+import { FlexContainerImage, GrayParagraph, InputText, LoginFormWarp, WhiteParagraph } from '../../../styles/Generics/Generics'
 import Button from '../../common/Button/Button';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
