@@ -24,5 +24,5 @@ export const NavItem = styled.li`
 export const NavigationContainer = styled.nav`
   @media (max-width: 1023px) {
     display: none;
-}
+  }
 `;

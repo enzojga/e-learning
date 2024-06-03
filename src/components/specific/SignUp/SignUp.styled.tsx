@@ -16,4 +16,7 @@ export const FlexContainerImage = styled(FlexContainer)`
   & > p {
     text-align: center;
   }
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `;

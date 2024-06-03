@@ -96,7 +96,7 @@ export const InputText = styled.input<InputProps>`
     font-weight: 600;
   }
   @media (max-width: 1023px) {
-    width: 95vw;
+    width: ${props => props.width ? props.width : '95vw'};
   }
 `;
 
@@ -104,6 +104,10 @@ export const LoginFormWarp = styled(FlexContainerColumn).attrs({ as: 'form' })`
   box-shadow: 0px 4px 59px 0px rgba(1, 254, 132, 0.4), 0px 0px 10px 5px rgba(1, 254, 132, 0.4);
   background: rgb(31, 36, 31);
   width: 500px;
-  height: 70vh;
-  border-radius: 16px
+  min-height: 70vh;
+  border-radius: 16px;
+  @media (max-width: 1023px) {
+    width: 100vw;
+    border-radius: 0;
+  }
 `;
