@@ -1,5 +1,5 @@
 import Button from '../../common/Button/Button';
-import { Header, ButtonContainer, WelcomeText } from './Navbar.styled';
+import { Header, WelcomeText, TabletOnlyContainer } from './Navbar.styled';
 import { FlexContainer } from '../../../styles/Generics/Generics';
 import RoundButton from '../../common/RoundButton/RoundButton';
 import { useContext, useState } from 'react';
@@ -19,9 +19,9 @@ const Navbar = ({ isLogged }: NavbarProps) => {
       <Logo />
       
       {!isLogged ? <>
-          <ButtonContainer>
+          <TabletOnlyContainer>
             <Button text='LOG IN' onClick={() => {navigate('/login')}}></Button>
-          </ButtonContainer>
+          </TabletOnlyContainer>
           <Navigation />
           <FlexContainer gap='12px' disapearontablet={true}>
             <Button text='LOG IN' onClick={() => {navigate('/login')}}></Button>

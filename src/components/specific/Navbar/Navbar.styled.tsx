@@ -1,13 +1,12 @@
 import styled from "styled-components";
-import { HeaderProps } from "./Navbar.interace";
 
 export const Header = styled.header`
   display: flex;
-  align-items: ${props => props.expanded ? 'start' : 'center'};
+  align-items: center;
   justify-content: space-around;
   border: 2px solid;
   background-color: black;
-  height: ${props => props.expanded ? '60vh' : '5rem'};
+  height: 5rem};
   width: 100vw;
   position: fixed;
   top: 0;
@@ -15,10 +14,13 @@ export const Header = styled.header`
   z-index: 4;
 `;
 
-export const ButtonContainer = styled.div`
+export const TabletOnlyContainer = styled.div`
+  background-color: black;
   @media (min-width: 1023px) {
     display: none;
-}`;
+  }
+`;
+
 
 export const WelcomeText = styled.p`
   color: white;
