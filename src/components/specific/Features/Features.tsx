@@ -1,6 +1,6 @@
 import React from 'react'
-import { FeatureContainer, FeatureTextContainer } from './Features.styled'
-import { GradientImage, GrayParagraph, WhiteParagraph } from '../../../styles/Generics/Generics'
+import { ButtonContainerBorderless, FeatureContainer, FeatureTextContainer } from './Features.styled'
+import { FlexContainer, GradientImage, GrayParagraph, WhiteParagraph } from '../../../styles/Generics/Generics'
 import SwiperContainer from './Swiper/Swiper'
 import featureImage from '../../../assets/feature-image.svg';
 
@@ -16,7 +16,21 @@ const Features = () => {
         </GrayParagraph>
         <SwiperContainer />
       </FeatureTextContainer>
-      <GradientImage src={featureImage}/>
+      <FlexContainer>
+        <GradientImage src={featureImage}/>
+        <ButtonContainerBorderless
+          style={{top:'10%', left: '10%'}}
+          darkMode={true}
+        >
+          ANYWHERE
+        </ButtonContainerBorderless>
+        <ButtonContainerBorderless
+          style={{top:'20%', left: '20%'}}
+          darkMode={true}
+        >
+          EASY
+        </ButtonContainerBorderless>
+      </FlexContainer>
     </FeatureContainer>
   )
 }

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FlexContainer, FlexContainerColumn } from "../../../styles/Generics/Generics";
+import { ButtonContainer } from "../../common/Button/Button.styled";
 
 export const FeatureContainer = styled(FlexContainer)`
   height: calc(100vh - 5rem);
@@ -20,4 +21,11 @@ export const FeatureTextContainer = styled(FlexContainerColumn)`
       text-align: center;
     }
   }
+`;
+
+export const ButtonContainerBorderless = styled(ButtonContainer)`
+  border: none;
+  position: absolute;
+  background: rgb(29, 34, 29);
+  cursor: initial;
 `;
