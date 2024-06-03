@@ -51,9 +51,7 @@ export const GrayParagraph = styled.p`
 `;
 
 export const FloatingBox = styled.div`
-  position: relative;
-  top: 305px;
-  left: 195px;
+  position: absolute;
   width: 325.52px;
   height: 325.52px;
   flex: none;
@@ -62,6 +60,9 @@ export const FloatingBox = styled.div`
   border-radius: 27px;
   backdrop-filter: blur(10px);
   background: linear-gradient(137.56deg, rgb(32, 36, 32) 23.825%,rgba(32, 36, 32, 0) 124.544%);
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `;
 
 export const InputText = styled.input<InputProps>`
