@@ -20,6 +20,7 @@ const Login = () => {
   const { setUserData } = useContext(UserContext);
 
   function handleRequest(e: any) {
+    console.log(e);
     e.preventDefault();
 
     if(username.length < 5 || password.length < 5) {
@@ -67,7 +68,7 @@ const Login = () => {
             placeholder="Password"
             onChange={e => setPassword(e.target.value)}
           />
-          <Button width='90%' text='Sign In'/>
+          <Button isSubmit={true} width='90%' text='Sign In'/>
           <Button onClick={() => {navigate('/signup')}} width='90%' text='Create an account' darkMode={true}/>
         </LoginFormWarp>
     </LoginContainer>

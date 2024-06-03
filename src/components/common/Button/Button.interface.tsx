@@ -3,6 +3,7 @@ export interface Props {
   darkMode?: boolean;
   width?: string,
   onClick?: () => void;
+  isSubmit?: boolean,
 }
 
 export interface ButtonProps {

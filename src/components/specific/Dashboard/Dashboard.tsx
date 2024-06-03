@@ -19,7 +19,7 @@ const Dashboard = () => {
       </FlexContainerColumn>
       <FlexContainerColumn gap='32px'>
         <FlexContainerColumn gap='32px'>
-          <CategoryParagraph>Categories:</CategoryParagraph>
+          <CategoryParagraph>Categories</CategoryParagraph>
           <FlexContainer gap='32px'>
             <Card icon='illustration'/>
             <Card icon='uiUx'/>
@@ -27,7 +27,7 @@ const Dashboard = () => {
           </FlexContainer>
         </FlexContainerColumn>
         <FlexContainerColumn>
-          <CategoryParagraph>Classes:</CategoryParagraph>
+          <CategoryParagraph>Classes</CategoryParagraph>
           <FlexContainer gap='12px'>
             {classesList.map((classItem, index) => (
               <PricingCard 
@@ -41,7 +41,7 @@ const Dashboard = () => {
           </FlexContainer>
         </FlexContainerColumn>
         <FlexContainerColumn>
-          <CategoryParagraph>Tutors:</CategoryParagraph>
+          <CategoryParagraph>Tutors</CategoryParagraph>
           <FlexContainer gap='12px'>
             {mentorsList.map((mentor, index) => (
               <MentorCard key={index} name={mentor.name} role={mentor.role}/>

@@ -57,7 +57,7 @@ const SignUp = () => {
             placeholder="Confirm password"
             onChange={e => setConfirmPassword(e.target.value)}
           />
-          <Button width='90%' text='Create account'/>
+          <Button isSubmit={true} width='90%' text='Create account'/>
           <GrayParagraph>Or</GrayParagraph>
           <Button onClick={() => {navigate('/login')}} darkMode={true} width='90%' text='Login'/>
         </LoginFormWarp>
